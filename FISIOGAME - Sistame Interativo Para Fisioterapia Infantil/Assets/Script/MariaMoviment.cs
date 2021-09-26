@@ -63,6 +63,29 @@ public class MariaMoviment : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        
+            if((collision.gameObject.layer == 8)||(collision.gameObject.layer == 9))
+            {
+                IsJumping = false;
+                anim.SetBool("IsJumping", false);
+            }
+        
+    }
+    
+    //Verifica se ja esta pulando
+    void OnCollisionExit2D(Collision2D collision)
+    {
+
+            if((collision.gameObject.layer == 8)||(collision.gameObject.layer == 9))
+            {
+                IsJumping = true;
+                anim.SetBool("IsJumping", true);
+            }
+    
+    }
+
 //Função da animação de agachar
     void Crouch(){
             if(Input.GetKeyDown(KeyCode.DownArrow))
@@ -78,5 +101,40 @@ public class MariaMoviment : MonoBehaviour
                 anim.SetBool("IsCrouching", false);
             }
     }
+
+    IEnumerator Damage(){
+    
+
+        for (float i = 0f; i < 1f; i += 0.1f) {
+            sprite.enabled = false;
+            yield return new WaitForSeconds (0.1f);
+            sprite.enabled = true;
+            yield return new WaitForSeconds (0.1f);
+
+        }
+
+        invunerable = false;
+    }
+
+//Recebe dano
+    public void DamagePlayer(){
+
+        invunerable = true;
+        //health--;
+        StartCoroutine (Damage());
+
+        /*if (health < 1){
+            
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Game_Over");
+        }*/
+    }
+   /*Adiciona vida 
+    public void LifePlayer(int num)
+    {
+        if(health<6)
+        {
+            health += num;
+        }
+    }*/
 
 }
