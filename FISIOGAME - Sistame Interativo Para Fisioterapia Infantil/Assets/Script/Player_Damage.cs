@@ -4,17 +4,25 @@ using UnityEngine;
 
 public class Player_Damage : MonoBehaviour
 {
-    private Personagem player;
+    private Maria player;
+    
     void Awake() {
-        player = GameObject.Find("Personagem").GetComponent<Personagem> ();
+
+        player = GameObject.Find("Maria").GetComponent<Maria>();
+
     }
+
 //Verifica colisao objetos dano
     void OnTriggerEnter2D(Collider2D other) {
 
-        if(other.CompareTag ("Object_Damage")){//Objetos que dao dano
-            if (!player.invunerable){
-                player.DamagePlayer ();
+        if(other.CompareTag ("Lixeira")){//Objetos que dao dano
+
+            if (player.invunerable == false){
+
+                player.DamagePlayer();
+
             }
+
         }        
     }
 }

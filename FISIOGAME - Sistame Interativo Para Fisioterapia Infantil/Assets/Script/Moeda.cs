@@ -8,14 +8,14 @@ public class Moeda : MonoBehaviour
 
 	private SpriteRenderer spriteRenderer;
 	private PolygonCollider2D polygonCollider2D;
-	//private Maria player;
+	private Maria player;
 
     // Start is called before the first frame update
     void Start()
     {
     	spriteRenderer = GetComponent<SpriteRenderer>();
     	polygonCollider2D = GetComponent<PolygonCollider2D>();
-		//player = GameObject.Find("Maria").GetComponent<Maria>();
+		player = GameObject.Find("Maria").GetComponent<Maria>();
     }
 
     private void OnTriggerEnter2D(Collider2D collider){
@@ -23,7 +23,6 @@ public class Moeda : MonoBehaviour
     	//Se o jogador encostar no item
     	if(collider.gameObject.layer == 6){
 			
-			Debug.Log("colidiu");
     		//desabilita o render e a colisão do objeto
     		spriteRenderer.enabled = false;
     		polygonCollider2D.enabled = false;

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MariaMoviment : MonoBehaviour
+public class Maria : MonoBehaviour
 {
     public float Speed;
     public float JumpForce;
@@ -103,7 +103,7 @@ public class MariaMoviment : MonoBehaviour
     }
 
     IEnumerator Damage(){
-    
+        Debug.Log("entrou pisca");
 
         for (float i = 0f; i < 1f; i += 0.1f) {
             sprite.enabled = false;
@@ -118,7 +118,7 @@ public class MariaMoviment : MonoBehaviour
 
 //Recebe dano
     public void DamagePlayer(){
-
+        Debug.Log("entrou função");
         invunerable = true;
         //health--;
         StartCoroutine (Damage());
