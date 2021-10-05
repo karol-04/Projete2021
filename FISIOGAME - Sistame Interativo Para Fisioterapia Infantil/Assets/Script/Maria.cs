@@ -143,13 +143,12 @@ public class Maria : MonoBehaviour
         }
     }
     
-    private void OnCollisonEnter2D(Collider2D collider){
+    public void VoceGanhou(){
         
-        if((collider.gameObject.layer == 10)&&(health > 0)){
+        if(health > 0){
             
-                UnityEngine.SceneManagement.SceneManager.LoadScene("Ganhou");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Ganhou");
             
-    
         }
     }
 }
