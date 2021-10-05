@@ -18,11 +18,23 @@ EditorBuildSettings:
     path: Assets/Scenes/Floresta.unity
     guid: b5fcb0596da2acb46b9170a35cfd70ea
   - enabled: 1
+    path: Assets/Scenes/DentroDaCasa.unity
+    guid: ac2e3d771fd015c4d8d286461c5c9324
+  - enabled: 1
+    path: Assets/Scenes/Caverna.unity
+    guid: 9324372ab7a01c544b26ee052259c4a6
+  - enabled: 1
     path: Assets/Scenes/CenaEscolhaFloresta.unity
     guid: 95c8c5b7f9745264bb75741a9ecaac29
   - enabled: 1
+    path: Assets/Scenes/Ganhou.unity
+    guid: 7e06be16b3c4dc746b79c6fb946e955e
+  - enabled: 1
     path: Assets/Scenes/CenaEscolha.unity
     guid: ba9e63c744be2d4489c23f1225abbd50
+  - enabled: 1
+    path: Assets/Scenes/Perdeu.unity
+    guid: 5c9d780db0e1a8a4c8ba63d97dd12591
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 9ba20154c5f85bc4697785145dafa786
