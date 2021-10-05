@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Maria : MonoBehaviour
 {
@@ -87,7 +88,7 @@ public class Maria : MonoBehaviour
     
     }
 
-//Função da animação de agachar
+    //Função da animação de agachar
     void Crouch(){
             if(Input.GetKeyDown(KeyCode.DownArrow))
             {
@@ -117,7 +118,7 @@ public class Maria : MonoBehaviour
         invunerable = false;
     }
 
-//Recebe dano
+    //Recebe dano
     public void DamagePlayer(){
         Debug.Log("entrou função");
         invunerable = true;
@@ -134,11 +135,13 @@ public class Maria : MonoBehaviour
         }
     }
    
-   //Adiciona vida 
+    //Adiciona vida 
     public void LifePlayer(int num)
     {
+        Debug.Log("Está entrando");
         if(health<4)
         {
+            Debug.Log("Está somando");
             health += num;
         }
     }

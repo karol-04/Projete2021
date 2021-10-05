@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class Moeda : MonoBehaviour
 {
-
 	private SpriteRenderer spriteRenderer;
 	private PolygonCollider2D polygonCollider2D;
 	private Maria player;
@@ -28,11 +27,11 @@ public class Moeda : MonoBehaviour
     		spriteRenderer.enabled = false;
     		polygonCollider2D.enabled = false;
 
-			//adiciona uma vida
-			player.LifePlayer(numHealth);
-
     		//destroi o item após 300ms
     		Destroy(gameObject, 0.3f);
+
+			//adiciona uma vida
+			player.LifePlayer(numHealth);
 
     	}
     }
