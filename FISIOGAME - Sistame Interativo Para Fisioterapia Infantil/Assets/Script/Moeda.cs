@@ -9,6 +9,7 @@ public class Moeda : MonoBehaviour
 	private SpriteRenderer spriteRenderer;
 	private PolygonCollider2D polygonCollider2D;
 	private Maria player;
+	public int numHealth;
 
     // Start is called before the first frame update
     void Start()
@@ -26,6 +27,9 @@ public class Moeda : MonoBehaviour
     		//desabilita o render e a colisão do objeto
     		spriteRenderer.enabled = false;
     		polygonCollider2D.enabled = false;
+
+			//adiciona uma vida
+			player.LifePlayer(numHealth);
 
     		//destroi o item após 300ms
     		Destroy(gameObject, 0.3f);

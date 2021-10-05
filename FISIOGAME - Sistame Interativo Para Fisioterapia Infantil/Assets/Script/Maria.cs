@@ -8,6 +8,7 @@ public class Maria : MonoBehaviour
     public float JumpForce;
     public bool IsJumping;
     public bool IsCrouching;
+    public int health;
     public bool invunerable = false;
     
     private Rigidbody2D rig;
@@ -120,20 +121,32 @@ public class Maria : MonoBehaviour
     public void DamagePlayer(){
         Debug.Log("entrou função");
         invunerable = true;
-        //health--;
+        if(health>0){
+
+            health--; 
+
+        }   
         StartCoroutine (Damage());
 
-        /*if (health < 1){
+        if (health < 1){
             
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Game_Over");
-        }*/
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Perdeu");
+        }
     }
-   /*Adiciona vida 
+   
+   //Adiciona vida 
     public void LifePlayer(int num)
     {
-        if(health<6)
+        if(health<4)
         {
             health += num;
+        }
+    }
+    
+    /*public void voceGanhou(){
+        if (health > 0){
+            
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Ganhou");
         }
     }*/
 
