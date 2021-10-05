@@ -145,13 +145,10 @@ public class Maria : MonoBehaviour
     
     private void OnCollisonEnter2D(Collider2D collider){
         
-        if(collider.gameObject.layer == 10){
-            
-            if (health > 0){
+        if((collider.gameObject.layer == 10)&&(health > 0)){
             
                 UnityEngine.SceneManagement.SceneManager.LoadScene("Ganhou");
             
-            }
     
         }
     }
