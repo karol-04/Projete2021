@@ -8,7 +8,6 @@ public class Moeda : MonoBehaviour
 	private SpriteRenderer spriteRenderer;
 	private PolygonCollider2D polygonCollider2D;
 	private Maria player;
-	public int numHealth;
 
     // Start is called before the first frame update
     void Start()
@@ -31,7 +30,7 @@ public class Moeda : MonoBehaviour
     		Destroy(gameObject, 0.3f);
 
 			//adiciona uma vida
-			player.LifePlayer(numHealth);
+			player.LifePlayer(1);
 
     	}
     }

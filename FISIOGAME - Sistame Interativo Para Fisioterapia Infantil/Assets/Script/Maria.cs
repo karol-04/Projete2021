@@ -139,10 +139,11 @@ public class Maria : MonoBehaviour
     public void LifePlayer(int num)
     {
         Debug.Log("Está entrando");
-        if(health<4)
+        if(health<3)
         {
             Debug.Log("Está somando");
             health += num;
+
         }
     }
     
