@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Maria : MonoBehaviour
 {
@@ -11,10 +12,14 @@ public class Maria : MonoBehaviour
     public bool IsCrouching;
     public int health;
     public bool invunerable = false;
+    public GameObject PanelPause;
+
     
     private Rigidbody2D rig;
     private Animator anim;
     private SpriteRenderer sprite;
+    private bool isPaused= false;
+    private Menu menu;
 
     void Start()
     {
@@ -25,9 +30,16 @@ public class Maria : MonoBehaviour
 
     void Update()
     {
-        Move();
-        Jump();
-        Crouch();
+        if(!isPaused)
+        {
+            Move();
+            Jump();
+            Crouch();
+        }
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            PauseScreen();
+        }
     }
 
     void Move()
@@ -89,7 +101,8 @@ public class Maria : MonoBehaviour
     }
 
     //Função da animação de agachar
-    void Crouch(){
+    void Crouch()
+    {
             if(Input.GetKeyDown(KeyCode.DownArrow))
             {
                 if(!IsCrouching)
@@ -104,7 +117,23 @@ public class Maria : MonoBehaviour
             }
     }
 
-    IEnumerator Damage(){
+    //Função de pausar o jogo
+    void PauseScreen()
+    {
+        if(isPaused)
+        {
+            isPaused= false;
+            PanelPause.SetActive(false);
+        }
+        else
+        {
+            isPaused= true;
+            PanelPause.SetActive(true);
+        }
+    }
+
+    IEnumerator Damage()
+    {
         Debug.Log("entrou pisca");
 
         for (float i = 0f; i < 1f; i += 0.1f) {
@@ -119,7 +148,8 @@ public class Maria : MonoBehaviour
     }
 
     //Recebe dano
-    public void DamagePlayer(){
+    public void DamagePlayer()
+    {
         Debug.Log("entrou função");
         invunerable = true;
         if(health>0){
@@ -147,12 +177,19 @@ public class Maria : MonoBehaviour
         }
     }
     
-    public void VoceGanhou(){
-        
-        if(health > 0){
-            
+    public void VoceGanhou()
+    {
+        if(health > 0)
+        {    
             UnityEngine.SceneManagement.SceneManager.LoadScene("Ganhou");
             
         }
     }
+
+    //chama a programação do menu principal
+    public void BackToMenu()
+    {
+        menu.ChamaMenu();
+    }
+
 }
