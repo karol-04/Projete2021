@@ -9,4 +9,5 @@ public class SeleçãoDePersonagem : MonoBehaviour
     {
         Instantiate(personagens[PlayerPrefs.GetInt("personagemSelecionado")],transform.position,Quaternion.identity);
     }
+    
 }

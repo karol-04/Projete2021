@@ -6,15 +6,16 @@ public class IrPJogoCidade : MonoBehaviour
 {
 
     void Start()
-    {
-        
+    {   
     }
 
     void Update()
     {
     }
-       public void ChamaCidade(){
-     UnityEngine.SceneManagement.SceneManager.LoadScene("Cidade");
+      
+    public void ChamaCidade()
+    {
+      UnityEngine.SceneManagement.SceneManager.LoadScene("Cidade");
     } 
 
 }

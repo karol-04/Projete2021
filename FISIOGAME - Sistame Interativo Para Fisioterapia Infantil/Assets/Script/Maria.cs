@@ -168,21 +168,18 @@ public class Maria : MonoBehaviour
     //Adiciona vida 
     public void LifePlayer(int num)
     {
-        Debug.Log("Está entrando");
         if(health<3)
         {
-            Debug.Log("Está somando");
             health += num;
 
         }
     }
     
     public void VoceGanhou()
-    {
+    {  
         if(health > 0)
-        {    
+        {
             UnityEngine.SceneManagement.SceneManager.LoadScene("Ganhou");
-            
         }
     }
 
