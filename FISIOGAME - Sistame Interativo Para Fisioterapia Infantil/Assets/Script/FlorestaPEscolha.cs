@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FlorestaPEscolha : MonoBehaviour
 {
+    private Maria player;
 
     void Start()
     {
@@ -13,8 +14,20 @@ public class FlorestaPEscolha : MonoBehaviour
     void Update()
     {
     }
-       public void ChamaCenaEscolhaFloresta(){
-     UnityEngine.SceneManagement.SceneManager.LoadScene("CenaEscolhaFloresta");
+
+    public void ChamaCenaEscolhaFloresta()
+    {
+      UnityEngine.SceneManagement.SceneManager.LoadScene("CenaEscolhaFloresta");
+    } 
+
+    public void PersonagemCervo()
+    {
+      player.PlayerCervo();
+    } 
+    
+    public void PersonagemCoelho()
+    {
+      player.PlayerCoelho();
     } 
 
 }
