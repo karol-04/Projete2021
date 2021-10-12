@@ -13,6 +13,7 @@ public class Maria : MonoBehaviour
     public int health;
     public bool invunerable = false;
     public GameObject PanelPause;
+    public GameObject[] players;
 
     
     private Rigidbody2D rig;
@@ -26,6 +27,8 @@ public class Maria : MonoBehaviour
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
+        DontDestroyOnLoad(gameObject);
+
     }
 
     void Update()
@@ -189,4 +192,19 @@ public class Maria : MonoBehaviour
         menu.ChamaMenu();
     }
 
+    private void OnLevelWasLoaded(int level)
+    {
+      FindStartPos();
+
+      players = GameObject.FindGameObjectsWithTag("Player");
+
+      if(players.Length > 1){
+          Destroy(players[1]);
+      }
+    }
+
+    void FindStartPos()
+    {
+        transform.position = GameObject.FindWithTag("StartPos").transform.position;
+    }
 }

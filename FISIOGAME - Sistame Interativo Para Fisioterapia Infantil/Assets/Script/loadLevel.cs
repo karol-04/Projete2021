@@ -13,8 +13,7 @@ public class loadLevel : MonoBehaviour
 
     void Start()
     {
-       DontDestroyOnLoad(gameObject);
-
+    
     }
 
     void Update()
