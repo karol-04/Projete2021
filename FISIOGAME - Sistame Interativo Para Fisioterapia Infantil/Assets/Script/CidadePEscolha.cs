@@ -13,8 +13,10 @@ public class CidadePEscolha : MonoBehaviour
     void Update()
     {
     }
-       public void ChamaCenaEscolhaCidade(){
-     UnityEngine.SceneManagement.SceneManager.LoadScene("CenaEscolhaCidade");
+       
+    public void ChamaCenaEscolhaCidade()
+    {
+      UnityEngine.SceneManagement.SceneManager.LoadScene("CenaEscolhaCidade");
     } 
 
 }

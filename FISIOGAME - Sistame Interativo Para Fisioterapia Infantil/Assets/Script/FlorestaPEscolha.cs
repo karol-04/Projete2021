@@ -19,15 +19,4 @@ public class FlorestaPEscolha : MonoBehaviour
     {
       UnityEngine.SceneManagement.SceneManager.LoadScene("CenaEscolhaFloresta");
     } 
-
-    public void PersonagemCervo()
-    {
-      player.PlayerCervo();
-    } 
-    
-    public void PersonagemCoelho()
-    {
-      player.PlayerCoelho();
-    } 
-
 }

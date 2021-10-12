@@ -207,17 +207,5 @@ public class Maria : MonoBehaviour
     {
         transform.position = GameObject.FindWithTag("StartPos").transform.position;
     }
-
-    public void PlayerCervo()
-    {
-        //desacionar trigger cervo, acionar trigger Coelho e habilitar renderer Cervo, desabilitar do coelho
-        sprite.enabled= false;
-        
-    }
-
-    public void PlayerCoelho()
-    {
-        //desacionar trigger coelho, acionar trigger cervo e habilitar renderer coelho, desabilitar do cervo
-        sprite.enabled= false;
-    }
+    
 }

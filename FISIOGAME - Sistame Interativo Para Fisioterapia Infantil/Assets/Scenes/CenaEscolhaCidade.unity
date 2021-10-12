@@ -218,6 +218,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 191133203}
+        m_TargetAssemblyTypeName: IrPJogoCidade, Assembly-CSharp
+        m_MethodName: PlayerAna
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &191133201
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,6 +375,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 437819045}
+        m_TargetAssemblyTypeName: IrPJogoCidade, Assembly-CSharp
+        m_MethodName: PlayerLucas
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &437819043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -499,6 +523,18 @@ MonoBehaviour:
       - m_Target: {fileID: 532675608}
         m_TargetAssemblyTypeName: IrPJogoCidade, Assembly-CSharp
         m_MethodName: ChamaCidade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 532675608}
+        m_TargetAssemblyTypeName: IrPJogoCidade, Assembly-CSharp
+        m_MethodName: PlayerPedro
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1232,6 +1268,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1735133997}
         m_TargetAssemblyTypeName: IrPJogoCidade, Assembly-CSharp
         m_MethodName: ChamaCidade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1735133997}
+        m_TargetAssemblyTypeName: IrPJogoCidade, Assembly-CSharp
+        m_MethodName: PlayerMaria
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
