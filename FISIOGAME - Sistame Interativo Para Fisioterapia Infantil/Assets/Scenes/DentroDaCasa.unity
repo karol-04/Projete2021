@@ -750,9 +750,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c78838c55a24d7a4898b7995f8dd3e6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  iLevelToLoad: 4
-  sLevelToLoad: 
-  useIntegerToLoadLevel: 1
+  iLevelToLoad: 6
+  sLevelToLoad: Cidade
+  useIntegerToLoadLevel: 0
 --- !u!61 &406738189
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -838,7 +838,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 406738187}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.84, y: -3.68, z: 0}
+  m_LocalPosition: {x: 1.86, y: -3.65, z: 0}
   m_LocalScale: {x: 0.7770296, y: 0.7295756, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2839,7 +2839,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2135247370}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.62, y: -0.58, z: -0.5676411}
+  m_LocalPosition: {x: -4.49, y: -3.69, z: -0.5676411}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
