@@ -198,7 +198,7 @@ public class Maria : MonoBehaviour
 
       players = GameObject.FindGameObjectsWithTag("Player");
 
-      if(players.Length > 1){
+      if((players.Length > 1)&&(Input.GetKeyDown(KeyCode.DownArrow))){
           Destroy(players[1]);
       }
     }
