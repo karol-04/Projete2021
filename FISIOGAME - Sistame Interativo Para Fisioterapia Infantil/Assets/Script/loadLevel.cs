@@ -25,7 +25,7 @@ public class loadLevel : MonoBehaviour
     {
         GameObject collisionGameObject = collision.gameObject;
 
-        if(collisionGameObject.name == "Maria")
+        if((collisionGameObject.name == "Maria")&&(Input.GetKeyDown(KeyCode.DownArrow)))
         {
             LoadScene();
         }

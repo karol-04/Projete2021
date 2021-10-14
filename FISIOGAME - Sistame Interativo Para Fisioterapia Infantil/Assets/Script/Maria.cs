@@ -137,8 +137,6 @@ public class Maria : MonoBehaviour
 
     IEnumerator Damage()
     {
-        Debug.Log("entrou pisca");
-
         for (float i = 0f; i < 1f; i += 0.1f) {
             sprite.enabled = false;
             yield return new WaitForSeconds (0.1f);
@@ -153,7 +151,6 @@ public class Maria : MonoBehaviour
     //Recebe dano
     public void DamagePlayer()
     {
-        Debug.Log("entrou função");
         invunerable = true;
         if(health>0){
 
@@ -198,7 +195,7 @@ public class Maria : MonoBehaviour
 
       players = GameObject.FindGameObjectsWithTag("Player");
 
-      if((players.Length > 1)&&(Input.GetKeyDown(KeyCode.DownArrow))){
+      if(players.Length > 1){
           Destroy(players[1]);
       }
     }
