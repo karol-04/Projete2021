@@ -10,6 +10,7 @@ public class Maria : MonoBehaviour
     public float JumpForce;
     public bool IsJumping;
     public bool IsCrouching;
+    public bool Troca;
     public int health;
     public bool invunerable = false;
     public GameObject PanelPause;
@@ -111,11 +112,13 @@ public class Maria : MonoBehaviour
                 if(!IsCrouching)
                 {
                     anim.SetBool("IsCrouching", true);
+                    Troca=true;
                 }
             }
             else if(Input.GetKeyUp(KeyCode.DownArrow))
             {
                 IsCrouching = false;
+                Troca=false;
                 anim.SetBool("IsCrouching", false);
             }
     }
@@ -180,6 +183,26 @@ public class Maria : MonoBehaviour
         if(health > 0)
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("Ganhou");
+        }
+    }
+    
+    public void Chamine()
+    {
+        Debug.Log("está chamando " +Troca);
+        if(Troca==true)
+        {
+            Debug.Log("Está agachando e chamando a cena");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("DentroDaCasa");
+        }
+    }
+
+    public void Tubo()
+    {
+        Debug.Log("está chamando " +Troca);
+        if(Troca==true)
+        {
+            Debug.Log("Está agachando e chamando a cena");
+            UnityEngine.SceneManagement.SceneManager.LoadScene("Caverna");
         }
     }
 

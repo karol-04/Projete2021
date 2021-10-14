@@ -18,7 +18,7 @@ public class IrPJogoCidade : MonoBehaviour
       UnityEngine.SceneManagement.SceneManager.LoadScene("Cidade");
     } 
 
-    public void PlayerLucas()
+    /*public void PlayerLucas()
     {
       PlayerPrefs.SetInt("personagemSelecionado", 3);
       PlayerPrefs.Save();
@@ -40,6 +40,6 @@ public class IrPJogoCidade : MonoBehaviour
     {
       PlayerPrefs.SetInt("personagemSelecionado", 0);
       PlayerPrefs.Save();
-    }
+    }*/
 
 }

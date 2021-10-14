@@ -990,8 +990,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1692424113}
-        m_TargetAssemblyTypeName: CidadePEscolha, Assembly-CSharp
-        m_MethodName: ChamaCenaEscolhaCidade
+        m_TargetAssemblyTypeName: IrPJogoCidade, Assembly-CSharp
+        m_MethodName: ChamaCidade
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1048,7 +1048,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1692424108}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d13716187bc954f45873f2469e984932, type: 3}
+  m_Script: {fileID: 11500000, guid: c31a325b8cf46a044906f8e35004ff34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1903928405
@@ -1135,8 +1135,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1903928410}
-        m_TargetAssemblyTypeName: FlorestaPEscolha, Assembly-CSharp
-        m_MethodName: ChamaCenaEscolhaFloresta
+        m_TargetAssemblyTypeName: IrPJogoFloresta, Assembly-CSharp
+        m_MethodName: ChamaFloresta
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1193,7 +1193,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1903928405}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe2568ceea2243f4198748e6c1abc94e, type: 3}
+  m_Script: {fileID: 11500000, guid: 6df15e6d979974b4eaeaaf7dbf0c9dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1960770334
