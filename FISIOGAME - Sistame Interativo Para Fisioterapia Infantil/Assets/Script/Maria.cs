@@ -13,7 +13,6 @@ public class Maria : MonoBehaviour
     public int health;
     public bool invunerable = false;
     public GameObject PanelPause;
-    public GameObject[] players;
 
     
     private Rigidbody2D rig;
@@ -27,7 +26,6 @@ public class Maria : MonoBehaviour
         rig = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         sprite = GetComponent<SpriteRenderer>();
-        DontDestroyOnLoad(gameObject);
 
     }
 
@@ -37,7 +35,6 @@ public class Maria : MonoBehaviour
         {
             Move();
             Jump();
-            Crouch();
         }
         if(Input.GetKeyDown(KeyCode.Escape))
         {
@@ -71,12 +68,12 @@ public class Maria : MonoBehaviour
             if(!IsJumping)
                 {
                     rig.AddForce(new Vector2(0f, JumpForce), ForceMode2D.Impulse);
-                    anim.SetBool("IsJumping", true);
+                    anim.SetBool("IsJumping", true); //ativa o parametro de condição para a animação
                 }
         }
         else if(Input.GetButtonUp("Jump"))
         {
-            anim.SetBool("IsJumping", false);
+            anim.SetBool("IsJumping", false); //desativa o parametro de condição para a animação
         }
     }
 
@@ -102,7 +99,7 @@ public class Maria : MonoBehaviour
             }
     
     }
-    
+
     //Função de pausar o jogo
     void PauseScreen()
     {
@@ -118,6 +115,7 @@ public class Maria : MonoBehaviour
         }
     }
 
+    //ativa e desativa o sprite renderer fazendo o personagem piscar
     IEnumerator Damage()
     {
         for (float i = 0f; i < 1f; i += 0.1f) {
