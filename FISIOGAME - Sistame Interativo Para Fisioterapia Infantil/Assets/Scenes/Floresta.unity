@@ -10841,6 +10841,7 @@ GameObject:
   - component: {fileID: 1050533856}
   - component: {fileID: 1050533855}
   - component: {fileID: 1050533854}
+  - component: {fileID: 1050533857}
   m_Layer: 5
   m_Name: ButtonPause
   m_TagString: Untagged
@@ -10910,7 +10911,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1050533855}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1050533857}
+        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
+        m_MethodName: ChamaMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1050533855
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10949,6 +10962,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1050533852}
   m_CullTransparentMesh: 1
+--- !u!114 &1050533857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1050533852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd6582905c4b1dc46b15b1bfb7bc1e0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1073094199
 GameObject:
   m_ObjectHideFlags: 0
@@ -13165,7 +13190,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9c117e76859cee4c898a7f5477c5e34, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 200
+  Speed: 150
   JumpForce: 10
   IsJumping: 0
   IsCrouching: 0
@@ -15520,7 +15545,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: de443322e3b5e0847bd70c46ce3172ef, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4059f82fb3e9be1488b1202c48efc4fd, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.5
   m_Pitch: 1

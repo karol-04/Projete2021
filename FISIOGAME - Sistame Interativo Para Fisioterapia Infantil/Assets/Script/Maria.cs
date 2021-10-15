@@ -147,11 +147,11 @@ public class Maria : MonoBehaviour
     }
    
     //Adiciona vida 
-    public void LifePlayer(int num)
+    public void LifePlayer()
     {
         if(health<3)
         {
-            health += num;
+            health += 1;
 
         }
     }

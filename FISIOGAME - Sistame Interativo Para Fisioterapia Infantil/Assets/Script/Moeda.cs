@@ -30,7 +30,7 @@ public class Moeda : MonoBehaviour
     		Destroy(gameObject, 0.3f);
 
 			//adiciona uma vida
-			player.LifePlayer(1);
+			player.LifePlayer();
 
     	}
     }
