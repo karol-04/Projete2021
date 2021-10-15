@@ -14,7 +14,7 @@ public class IrPGanhou : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider){
 		
-    	//Se o jogador encostar no item
+    	//Se o jogador encostar no item chama a função dentro do script maria
     	if(collider.gameObject.layer == 6)
         {
             player.VoceGanhou();

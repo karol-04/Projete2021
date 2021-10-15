@@ -17,11 +17,11 @@ public class Moeda : MonoBehaviour
 		player = GameObject.Find("Maria").GetComponent<Maria>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collider){
-		
-    	//Se o jogador encostar no item
-    	if(collider.gameObject.layer == 6){
-			
+    private void OnTriggerEnter2D(Collider2D collider)
+	{
+		//Se o jogador encostar no item
+    	if(collider.gameObject.layer == 6)
+		{	
     		//desabilita o render e a colisão do objeto
     		spriteRenderer.enabled = false;
     		polygonCollider2D.enabled = false;
@@ -29,9 +29,8 @@ public class Moeda : MonoBehaviour
     		//destroi o item após 300ms
     		Destroy(gameObject, 0.3f);
 
-			//adiciona uma vida
+			//chama a função de adicionar vida
 			player.LifePlayer();
-
     	}
     }
 }

@@ -77,6 +77,7 @@ public class Maria : MonoBehaviour
         }
     }
 
+    //Verifica se não está pulando
     void OnCollisionEnter2D(Collision2D collision)
     {
         
@@ -88,7 +89,7 @@ public class Maria : MonoBehaviour
         
     }
     
-    //Verifica se ja esta pulando
+    //Verifica se ja está pulando
     void OnCollisionExit2D(Collision2D collision)
     {
 
@@ -100,7 +101,7 @@ public class Maria : MonoBehaviour
     
     }
 
-    //Função de pausar o jogo
+    //Ativa o painel de pause se for chamada e não estiver pausada
     void PauseScreen()
     {
         if(isPaused)
@@ -129,7 +130,7 @@ public class Maria : MonoBehaviour
         invunerable = false;
     }
 
-    //Recebe dano
+    //Recebe dano quando a vida é maior que zero e chama a cena perdeu quando acaba as vidas
     public void DamagePlayer()
     {
         invunerable = true;
@@ -146,7 +147,7 @@ public class Maria : MonoBehaviour
         }
     }
    
-    //Adiciona vida 
+    //Adiciona vida quando a vida é menor que três
     public void LifePlayer()
     {
         if(health<3)
@@ -156,6 +157,7 @@ public class Maria : MonoBehaviour
         }
     }
     
+    //Chama a cena ganhou quando a vida é maior que zero
     public void VoceGanhou()
     {  
         if(health > 0)
