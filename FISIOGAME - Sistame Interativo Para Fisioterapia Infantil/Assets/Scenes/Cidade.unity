@@ -8718,6 +8718,7 @@ MonoBehaviour:
   JumpForce: 10
   IsJumping: 0
   IsCrouching: 0
+  Troca: 0
   health: 3
   invunerable: 0
   PanelPause: {fileID: 124781891}
