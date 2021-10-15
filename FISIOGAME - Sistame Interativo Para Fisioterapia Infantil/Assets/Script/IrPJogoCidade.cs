@@ -17,29 +17,4 @@ public class IrPJogoCidade : MonoBehaviour
     {
       UnityEngine.SceneManagement.SceneManager.LoadScene("Cidade");
     } 
-
-    /*public void PlayerLucas()
-    {
-      PlayerPrefs.SetInt("personagemSelecionado", 3);
-      PlayerPrefs.Save();
-    }
-
-    public void PlayerPedro()
-    {
-      PlayerPrefs.SetInt("personagemSelecionado", 2);
-      PlayerPrefs.Save();
-    }
-
-    public void PlayerAna()
-    {
-      PlayerPrefs.SetInt("personagemSelecionado", 1);
-      PlayerPrefs.Save();
-    }
-
-    public void PlayerMaria()
-    {
-      PlayerPrefs.SetInt("personagemSelecionado", 0);
-      PlayerPrefs.Save();
-    }*/
-
 }

@@ -10,7 +10,6 @@ public class Maria : MonoBehaviour
     public float JumpForce;
     public bool IsJumping;
     public bool IsCrouching;
-    public bool Troca;
     public int health;
     public bool invunerable = false;
     public GameObject PanelPause;
@@ -103,26 +102,7 @@ public class Maria : MonoBehaviour
             }
     
     }
-
-    //Função da animação de agachar
-    void Crouch()
-    {
-            if(Input.GetKeyDown(KeyCode.DownArrow))
-            {
-                if(!IsCrouching)
-                {
-                    anim.SetBool("IsCrouching", true);
-                    Troca=true;
-                }
-            }
-            else if(Input.GetKeyUp(KeyCode.DownArrow))
-            {
-                IsCrouching = false;
-                Troca=false;
-                anim.SetBool("IsCrouching", false);
-            }
-    }
-
+    
     //Função de pausar o jogo
     void PauseScreen()
     {
@@ -186,46 +166,10 @@ public class Maria : MonoBehaviour
         }
     }
     
-    public void Chamine()
-    {
-        Debug.Log("está chamando " +Troca);
-        if(Troca==true)
-        {
-            Debug.Log("Está agachando e chamando a cena");
-            UnityEngine.SceneManagement.SceneManager.LoadScene("DentroDaCasa");
-        }
-    }
-
-    public void Tubo()
-    {
-        Debug.Log("está chamando " +Troca);
-        if(Troca==true)
-        {
-            Debug.Log("Está agachando e chamando a cena");
-            UnityEngine.SceneManagement.SceneManager.LoadScene("Caverna");
-        }
-    }
-
     //chama a programação do menu principal
     public void BackToMenu()
     {
         menu.ChamaMenu();
-    }
-
-    private void OnLevelWasLoaded(int level)
-    {
-      FindStartPos();
-
-      players = GameObject.FindGameObjectsWithTag("Player");
-
-      if(players.Length > 1){
-          Destroy(players[1]);
-      }
-    }
-
-    void FindStartPos()
-    {
-        transform.position = GameObject.FindWithTag("StartPos").transform.position;
     }
     
 }

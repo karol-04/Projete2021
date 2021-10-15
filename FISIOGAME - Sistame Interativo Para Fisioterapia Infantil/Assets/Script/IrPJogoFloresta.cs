@@ -18,17 +18,4 @@ public class IrPJogoFloresta : MonoBehaviour
     {
      UnityEngine.SceneManagement.SceneManager.LoadScene("Floresta");
     } 
-    
-    /*public void PlayerCervo()
-    {
-      PlayerPrefs.SetInt("personagemSelecionado", 0);
-      PlayerPrefs.Save();
-    }
-
-    public void PlayerCoelho()
-    {
-      PlayerPrefs.SetInt("personagemSelecionado", 1);
-      PlayerPrefs.Save();
-    }*/
-
 }
