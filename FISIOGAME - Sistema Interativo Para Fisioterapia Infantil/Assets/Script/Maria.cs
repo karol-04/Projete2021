@@ -23,9 +23,9 @@ public class Maria : MonoBehaviour
 
     void Start()
     {
-        rig = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
-        sprite = GetComponent<SpriteRenderer>();
+        rig = GetComponent<Rigidbody2D>(); //para manipular qualquer coisa dentro do Rigidvody2D.
+        anim = GetComponent<Animator>(); //para manipular qualquer coisa dentro do Animator.
+        sprite = GetComponent<SpriteRenderer>(); //para manipular qualquer coisa dentro do SpriteRender.
 
     }
 
@@ -36,7 +36,8 @@ public class Maria : MonoBehaviour
             Move();
             Jump();
         }
-        if(Input.GetKeyDown(KeyCode.Escape))
+        //pausa jogo
+        if(Input.GetKeyDown(KeyCode.Escape)) 
         {
             PauseScreen();
         }
@@ -44,9 +45,11 @@ public class Maria : MonoBehaviour
 
     void Move()
     {
-        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f);
-        transform.position += movement * Time.deltaTime * Speed;
-        if(Input.GetAxis("Horizontal") > 0f){
+        Vector3 movement = new Vector3(Input.GetAxis("Horizontal"), 0f, 0f); //variavel Vector3 recebe um novo Vector3 com as posições input no x, 0 no y, e 0 no z.
+        transform.position += movement * Time.deltaTime * Speed; //posição do personagem que adiciona velocidade.
+
+            //Direita
+            if(Input.GetAxis("Horizontal") > 0f){
                 anim.SetBool("walking", true);
                 transform.eulerAngles = new Vector3(0f,0f,0f);
             }
@@ -71,7 +74,7 @@ public class Maria : MonoBehaviour
                     anim.SetBool("IsJumping", true); //ativa o parametro de condição para a animação
                 }
         }
-        else if(Input.GetButtonUp("Jump"))
+            else if(Input.GetButtonUp("Jump"))
         {
             anim.SetBool("IsJumping", false); //desativa o parametro de condição para a animação
         }

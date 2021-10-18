@@ -11,7 +11,7 @@ public class HealthBar : MonoBehaviour
 
     void Start()
     {
-       player = GameObject.Find("Maria").GetComponent<Maria> ();
+       player = GameObject.Find("Maria").GetComponent<Maria> (); //para manipular qualquer coisa dentro de Maria.
     }
 
 //Altera o hud de acordo com a vida
