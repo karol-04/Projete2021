@@ -10,6 +10,6 @@ O projeto é composto por uma órtese no punho que capta os movimentos e por mei
       Como jogar
 
 Para acessar o jogo, baixe o repositório via pasta compacta ou o clone usando git.
-Em seguida, acesse a pasta "Jogo Executável". Nessa pasta, execute o arquivo .exe "FISIOGAME". O jogo deve iniciar em seguida.
+Em seguida, acesse a pasta "Jogo Executável". Nessa pasta, execute o arquivo .exe "FISIOGAME - Sistema Interativo Para Fisioterapia Infantil". O jogo deve iniciar em seguida.
 
 -Observação: Como foi um jogo desenvolvido para a órtese, pode não funcionar corretamente sem ela e o conversor 232Key.
